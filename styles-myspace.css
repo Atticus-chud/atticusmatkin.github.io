@@ -1,0 +1,60 @@
+:root{
+--bg:#0e0f13;--ink:#f2f3f7;--muted:#b5b7c3;--card:#1a1d26;--edge:#2a2f3a;--link:#9fd1ff;--accent:#ff9bb5;
+--radius:16px;--gap:1rem;--shadow:0 8px 24px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+html{color-scheme:dark}
+body{margin:0;background:radial-gradient(1200px 800px at 10% 0%,#192033 0%,#0e0f13 60%),var(--bg);color:var(--ink);font:16px/1.6 system-ui,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
+img{max-width:100%;display:block}
+
+
+.container{max-width:1100px;margin:0 auto;padding:1.5rem}
+.masthead{border-bottom:1px solid var(--edge);background:linear-gradient(180deg,rgba(255,255,255,.02),transparent)}
+.masthead h1{margin:0;font-size:1.75rem;letter-spacing:.02em;text-transform:lowercase}
+.masthead .tag{margin:.25rem 0 0;color:var(--muted)}
+
+
+.layout{display:grid;grid-template-columns:280px 1fr;gap:var(--gap);align-items:start;margin-top:1rem}
+.card{background:var(--card);border:1px solid var(--edge);border-radius:var(--radius);box-shadow:var(--shadow);padding:1rem}
+
+
+.left .profile{position:sticky;top:1rem}
+.avatar{border-radius:12px;border:1px solid var(--edge)}
+.profile h2{margin:.75rem 0 .25rem;font-size:1.1rem}
+.profile .mood{margin:.25rem 0;color:var(--muted)}
+.profile .mood span{color:var(--accent);text-transform:uppercase;font-size:.75rem;letter-spacing:.08em}
+.profile .login{color:var(--muted);font-size:.9rem}
+.links{display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin:1rem 0}
+.links a{display:block;padding:.5rem .6rem;background:#10131b;border:1px solid var(--edge);border-radius:10px;color:var(--ink);text-decoration:none}
+.links a:hover{outline:2px solid color-mix(in oklab,var(--link) 45%,transparent)}
+.player{width:100%;margin-top:.5rem}
+
+
+.blurbs h3{margin:.75rem 0 .25rem}
+.blurbs ul{padding-left:1.2rem;margin:.5rem 0}
+
+
+.hero h2{margin:.25rem 0 .5rem;font-size:1.4rem}
+
+
+.friends .grid{list-style:none;padding:0;margin:.5rem 0;display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:.75rem}
+.friends li a{display:flex;flex-direction:column;gap:.35rem;text-decoration:none;color:var(--ink);background:#111421;border:1px solid var(--edge);border-radius:12px;padding:.6rem}
+.friends img{border-radius:8px;border:1px solid var(--edge)}
+.friends span{font-size:.9rem;color:var(--muted)}
+
+
+.comments .comment{display:grid;grid-template-columns:60px 1fr;gap:.75rem;padding:.6rem 0;border-top:1px solid var(--edge)}
+.comments .comment:first-child{border-top:none}
+.comments h4{margin:.1rem 0}
+.comments time{color:var(--muted);font-size:.85rem}
+.comments .note{color:var(--muted);font-size:.9rem;margin-top:.5rem}
+
+
+.footer{border-top:1px solid var(--edge);margin-top:1rem;background:linear-gradient(0deg,rgba(255,255,255,.02),transparent)}
+.footer small{color:var(--muted)}
+
+
+/* MySpace‑ish flourishes */
+a{color:var(--link)}
+a:hover{text-decoration:underline;text-underline-offset:.2em}
+@media (max-width:900px){.layout{grid-template-columns:1fr}}
